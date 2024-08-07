@@ -1,0 +1,48 @@
+
+
+这个是生成cel数据集分割背景的代码
+python inference_white_background.py --net isnet_is --ckpt G:\project\char_seg\anime-segmentation-mainskytnt\saved_models\isnetis.ckpt --data G:\project\Image_Retrieval\dataset\skycastle --out G:\project\Image_Retrieval\dataset\skycastle\canny --img-size 1024 --only-matted
+
+
+
+python inference_white_background.py --net isnet_is --ckpt G:\project\char_seg\anime-segmentation-mainskytnt\saved_models\isnetis.ckpt --data G:\project\shot_detection\skycastle --out G:\project\char_seg\anime-segmentation-mainskytnt\sky --img-size 1024 --only-matted
+
+python inference_white_background.py --net isnet_is --ckpt G:\project\char_seg\anime-segmentation-mainskytnt\saved_models\isnetis.ckpt --data G:\project\shot_detection\skycastle --out G:\project\char_seg\anime-segmentation-mainskytnt\sky --img-size 1024 --only-matted
+
+
+
+python generate_dataset_superglue.py --net isnet_is --ckpt G:\project\char_seg\anime-segmentation-mainskytnt\saved_models\isnetis.ckpt --data G:\project\shot_detection\supergluedataset\monv --out G:\project\shot_detection\supergluedataset\monv2 --img-size 1024 --only-matted
+
+
+
+
+
+
+
+生成groundtruth：
+python groundtruth.py --net isnet_is --ckpt G:\project\char_seg\anime-segmentation-mainskytnt\saved_models\isnetis.ckpt --data G:\project\shot_detection\pick --out out --img-size 1024 --only-matted
+
+python inference.py --net isnet_is --ckpt G:\project\char_seg\anime-segmentation-mainskytnt\saved_models\isnetis.ckpt --data G:\project\shot_detection\sample --out out --img-size 1024 --only-matted
+
+
+python inference_white_background.py --net isnet_is --ckpt G:\project\char_seg\anime-segmentation-mainskytnt\saved_models\isnetis.ckpt --data G:\project\shot_detection\monv_sim --out monv --img-size 1024 --only-matted
+
+评估：python evaluate_masks.py --gt-dir G:\project\char_seg\pick\ground_truth --pred-dir G:\project\char_seg\anime-segmentation-mainskytnt\out
+
+python evaluate_masks.py --gt-dir G:\project\char_seg\pick\ground_truth --pred-dir G:\project\char_seg\CartoonSegmentation-main\output_images
+
+
+
+module load python/3.9.9
+
+
+
+
+
+module load cuda/11.7.0
+
+source pytorch-env/bin/activate
+
+python -c "import torch; print(torch.__version__)"
+
+
