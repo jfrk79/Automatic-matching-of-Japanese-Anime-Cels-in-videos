@@ -4,7 +4,7 @@
 
 This project proposes an integrated method based on multiple deep learning networks for the automatic identification and matching of hand-drawn anime cels in video clips. Addressing the challenges faced in the preservation and digitization of anime cels, this method aids in the preservation and recording of relevant information about these cels.
 
-First, we use the Anime-Segmentation algorithm to segment characters in keyframes extracted from animations, reducing background interference. Next, we utilize the CLIP-ResNet model to extract features from the segmented images and perform image retrieval to narrow down the search scope. Then, the SuperGlue algorithm is employed for multiple feature matching steps to accurately locate keyframes. Our method has been tested on several public animation datasets and successfully completed the task of locating anime cel information in animations.
+First, we use the Anime-Segmentation algorithm to segment characters in keyframes extracted from animations, reducing background interference. Next, we utilize the CLIP-ResNet model to extract features from the segmented images and perform image retrieval to narrow down the search scope. Then, the SuperGlue algorithm is employed for multiple feature matching steps to accurately locate keyframes. Our method has been tested on an experimental image set and successfully completed the task of locating anime cel information in animations.
 
 ## Features
 
